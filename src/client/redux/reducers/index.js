@@ -1,11 +1,7 @@
 import {
   SET_LOGIN,
   SET_LOGOUT,
-  GET_MESSAGES,
-  SET_MESSAGES,
-  SET_ONE_MESSAGE,
-  SET_KEYWORDS_SEARCH,
-  SET_EMPTY_SEARCH
+  SET_ONE_MESSAGE
 } from "../../constants/actionTypes";
 
 const initialState = {
@@ -32,27 +28,6 @@ export default function(state = initialState, action) {
         isLoged: false
       };
     }
-    // case SET_EMPTY_SEARCH: {
-    //   state.search = "";
-    //   return {
-    //     ...state
-    //   };
-    // }
-    // case SET_KEYWORDS_SEARCH: {
-    //   state.search = action.payload;
-    //   return {
-    //     ...state
-    //   };
-    // }
-    // case GET_MESSAGES: {
-    //   return { ...state };
-    // }
-    // case SET_MESSAGES: {
-    //   return {
-    //     ...state,
-    //     messages: action.payload
-    //   };
-    // }
     case SET_ONE_MESSAGE: {
       return {
         ...state,

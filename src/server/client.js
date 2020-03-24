@@ -1,3 +1,7 @@
+/**
+ * @example
+ */
+
 const socket = require("socket.io-client");
 const { environments } = require("./config");
 

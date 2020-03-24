@@ -5,7 +5,7 @@ const InputMessage = props => {
 
   const handleKeyPressed = ({ key, target }) => {
     if (key === "Enter" && target.value) {
-      props.handleSubmitMessage({ msg: target.value, username: "a" });
+      props.handleSubmitMessage({ msg: target.value });
       setMessage("");
     }
   };

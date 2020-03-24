@@ -4,10 +4,10 @@ import InputMessage from "../components/Chats/InputMessage";
 import Register from "../components/Register";
 import { connect } from "react-redux";
 import sicketIO from "socket.io-client";
-
+import { WEBSOCKET } from "../constants/host";
 import { setLogin, setOneMessage } from "../redux/actions";
 
-const client = sicketIO.connect("http://localhost:3001");
+const client = sicketIO.connect(WEBSOCKET);
 
 class Chats extends Component {
   constructor(props) {
