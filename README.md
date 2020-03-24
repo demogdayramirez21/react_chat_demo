@@ -4,5 +4,5 @@
 
 ### Correr proyecto
 
-npm run start
-npm run dev
+    npm run start
+    npm run dev
