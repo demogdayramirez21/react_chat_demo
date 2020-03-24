@@ -3,3 +3,6 @@ export const SET_MESSAGES = "SET_MESSAGES";
 export const SET_ONE_MESSAGE = "SET_ONE_MESSAGE";
 export const SET_KEYWORDS_SEARCH = "SET_KEYWORDS_SEARCH";
 export const SET_EMPTY_SEARCH = "SET_EMPTY_SEARCH";
+
+export const SET_LOGIN = "SET_LOGIN";
+export const SET_LOGOUT = "SET_LOGOUT";

@@ -22,19 +22,16 @@ app.get("/api/getUsername", (req, res) =>
   res.send({ username: os.userInfo().username })
 );
 
-server = app.listen(port || 8080, () =>
-  console.log(`Listening on port ${process.env.port || 8080}!`)
-);
+server = app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 io = socket(server);
-// io.set("transports", ["websocket"]);
 
 io.on("connection", socket => {
-  socket.on("test", msg => console.log(msg));
   socket.on("INIT", data => {
     socket.join(data.username);
+    io.to(data.username).emit("INIT", data.username);
   });
-  socket.on("NOTIFY", function(data) {
-    io.to(data.username).emit("NOTIFY", data.msg);
+  socket.on("NOTIFY", data => {
+    io.emit("NOTIFY", data);
   });
 });

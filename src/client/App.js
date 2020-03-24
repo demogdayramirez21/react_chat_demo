@@ -8,14 +8,20 @@ import store from "./store";
  * Main CSS Styles
  */
 import "./styles/main.css";
-import Main from "./components/chat/Main";
+import Chats from "./containers/Chats";
 
-function App() {
-  return (
-    <Provider store={store}>
-      <Main />
-    </Provider>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <Provider store={store}>
+        <Chats />
+      </Provider>
+    );
+  }
 }
 
 export default App;
