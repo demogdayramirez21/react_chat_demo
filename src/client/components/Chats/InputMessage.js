@@ -16,7 +16,7 @@ const InputMessage = props => {
       placeholder="Escribir mensaje, pulsar enter"
       value={message}
       onChange={({ target }) => setMessage(target.value)}
-      onKeyDown={event => handleKeyPressed(event, props)}
+      onKeyDown={event => handleKeyPressed(event)}
     />
   );
 };

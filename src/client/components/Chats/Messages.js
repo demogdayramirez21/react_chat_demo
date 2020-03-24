@@ -21,7 +21,6 @@ const buildMessages = (messages, username) => {
 
 const Messages = props => {
   const { messages, username } = props;
-  console.log(props);
   return <ol className="chat">{buildMessages(messages, username)}</ol>;
 };
 
